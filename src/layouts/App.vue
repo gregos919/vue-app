@@ -29,7 +29,12 @@
   }
 </script>
 <style>
-  .v-toolbar__content{
+  .theme--light.v-toolbar{
+    background-color: #009bc0;
+  }
+
+  .v-toolbar__content,
+  .container{
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -41,6 +46,9 @@
 
   .v-btn{
     font-weight: bold;
+  }
+  .v-btn .v-btn__content{
+    color: white;
   }
 </style>
 
