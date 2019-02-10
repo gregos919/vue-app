@@ -1,10 +1,9 @@
 <template>
     <div
             class="contact"
-            v-show="!contactSentSuccessfully"
     >
         <h1 class="display-2 mb-4 mt-4 text-xs-center">{{contactUsTitle}}</h1>
-        <v-form>
+        <v-form v-show="!contactSentSuccessfully">
             <v-text-field
                     v-model="formData.email"
                     label="Email"
@@ -51,7 +50,7 @@ export default {
                     this.snackbarMessage = response.data.message;
                     this.snackbarColor = "success";
                     this.snackbar = true;
-                    this.contactUsTitle = "Thank for contacting us, we'll get back to you soon!";
+                    this.contactUsTitle = "Thank you for contacting us, we'll get back to you soon!";
                     this.contactSentSuccessfully = true;
                     this.isLoading = false;
                 })
